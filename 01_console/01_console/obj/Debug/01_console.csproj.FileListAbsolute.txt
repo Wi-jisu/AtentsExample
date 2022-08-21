@@ -1,0 +1,8 @@
+C:\Users\82105\Documents\GitHub\AtentsExample\01_console\01_console\bin\Debug\01_console.exe.config
+C:\Users\82105\Documents\GitHub\AtentsExample\01_console\01_console\bin\Debug\01_console.exe
+C:\Users\82105\Documents\GitHub\AtentsExample\01_console\01_console\bin\Debug\01_console.pdb
+C:\Users\82105\Documents\GitHub\AtentsExample\01_console\01_console\obj\Debug\01_console.csproj.AssemblyReference.cache
+C:\Users\82105\Documents\GitHub\AtentsExample\01_console\01_console\obj\Debug\01_console.csproj.SuggestedBindingRedirects.cache
+C:\Users\82105\Documents\GitHub\AtentsExample\01_console\01_console\obj\Debug\01_console.csproj.CoreCompileInputs.cache
+C:\Users\82105\Documents\GitHub\AtentsExample\01_console\01_console\obj\Debug\01_console.exe
+C:\Users\82105\Documents\GitHub\AtentsExample\01_console\01_console\obj\Debug\01_console.pdb
