@@ -12,13 +12,13 @@ namespace _01_Console
         // 스코프(Scope) : 변수나 함수를 사용할 수 있는 범위. 변수를 선언한 시점에서 해당 변수가 포함된 중괄호가 끝나는 구간까지
         static void Main(string[] args)
         {
-            //int sumResult = Sum(10, 20);        // break point (단축키 F9)
-            //Console.WriteLine($"SumResult : {sumResult}");
-            //Print();
-            //Test_Function();
+            int sumResult = Sum(10, 20);        // break point (단축키 F9)
+            Console.WriteLine($"SumResult : {sumResult}");
+            Print();
+            Test_Function();
             //Test_GuGudan();
-            //Test_Character();
-            //Test_Human();
+            Test_Character();
+            Test_Human();
 
             // 주말과제용
             Human player = new Human();
@@ -321,7 +321,8 @@ namespace _01_Console
             //string temp = Console.ReadLine();
 
             //// 실습 : exp의 값과 추가로 입력받은 경험치의 합이 1이상이면 "레벨업"이라고 출력하고 1미만이면 합계를 출력하는 코드 작성하기
-            //// 시간 : 12시 55분까지
+            ///
+            /// / 시간 : 12시 55분까지
 
             //float tempExp;
             //float.TryParse(temp, out tempExp);
