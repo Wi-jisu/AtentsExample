@@ -12,17 +12,77 @@ namespace _01_Console
         // 스코프(Scope) : 변수나 함수를 사용할 수 있는 범위. 변수를 선언한 시점에서 해당 변수가 포함된 중괄호가 끝나는 구간까지
         static void Main(string[] args)
         {
-            int sumResult = Sum(10, 20);        // break point (단축키 F9)
-            Console.WriteLine($"SumResult : {sumResult}");
-            Print();
-            Test_Function();
+            //int sumResult = Sum(10, 20);        // break point (단축키 F9)
+            //Console.WriteLine($"SumResult : {sumResult}");
+            //Print();
+            //Test_Function();
             //Test_GuGudan();
-            Test_Character();
-            Test_Human();
+            //Test_Character();
+            //Test_Human();
 
             // 주말과제용
-            Human player = new Human();
-            //Orc enemy = new Orc();
+
+            Human player;
+            string result;
+            do
+            {
+                Console.Write("당신의 이름을 입력해 주세요 : ");
+                string name = Console.ReadLine();
+                player = new Human(name);
+                Console.Write($"이대로 진행하시겠습니까? (yes/no): ");
+                result = Console.ReadLine();
+            }
+            //while (!(result == "yes" || result == "Yes" || result == "y" || result == "Y"));
+            while (result != "yes" && result != "Yes" && result != "y" && result != "Y");
+
+            Orc enemy = new Orc("가로쉬");
+
+            Console.WriteLine($"오크 {enemy.Name}가 나타났다.");
+
+            Console.WriteLine("\n\n------------------------------------전투시작------------------------------------\n\n");
+
+            while (true)   // 무한 루프
+            {
+                int selection = 0;
+                do
+                {
+                    Console.Write("행동을 선택하세요 ( 1)공격   2)스킬   3)방어 ) : ");
+                    string temp = Console.ReadLine();
+                    int.TryParse(temp, out selection);
+                } while (selection < 1 || selection > 3);
+                //while (selection != 1 && selection != 2 && selection != 3) ;
+
+                switch (selection)
+                {
+                    case 1:
+                        player.Attack(enemy);
+                        break;
+                    case 2:
+                        player.Skill(enemy);
+                        break;
+                    case 3:
+                        player.Defense();
+                        break;
+                    default:
+                        break;
+                }
+
+                player.TestPrintStatus();
+                enemy.TestPrintStatus();
+                if (enemy.IsDead)
+                {
+                    Console.WriteLine("승리!");
+                    break;
+                }
+                enemy.Attack(player);
+                player.TestPrintStatus();
+                enemy.TestPrintStatus();
+                if (player.IsDead)
+                {
+                    Console.WriteLine("패배...");
+                    break;
+                }
+            }
 
 
             Console.ReadKey();                  // 키 입력 대기하는 코드
@@ -321,8 +381,7 @@ namespace _01_Console
             //string temp = Console.ReadLine();
 
             //// 실습 : exp의 값과 추가로 입력받은 경험치의 합이 1이상이면 "레벨업"이라고 출력하고 1미만이면 합계를 출력하는 코드 작성하기
-            ///
-            /// / 시간 : 12시 55분까지
+            //// 시간 : 12시 55분까지
 
             //float tempExp;
             //float.TryParse(temp, out tempExp);
